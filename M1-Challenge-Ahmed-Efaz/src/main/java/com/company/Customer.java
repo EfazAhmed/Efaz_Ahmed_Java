@@ -36,12 +36,7 @@ public class Customer {
     public List<AccountRecord> getCharges() {
         return charges;
     }
-
-    // what i added personally but not sure if i need to keep this
-    public void addCharge(AccountRecord record) {
-        charges.add(record);
-    }
-
+    
     @Override
     public String toString() {
         //update this

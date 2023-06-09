@@ -22,7 +22,7 @@ class CustomerTest {
             AccountRecord record = new AccountRecord();
             record.setCharge(i);
             record.setChargeDate("01-01-2023");
-            customer1.addCharge(record);
+            customer1.getCharges().add(record);
         }
         // Setting up Customer 2
         customer2 = new Customer();
@@ -32,7 +32,7 @@ class CustomerTest {
             AccountRecord record = new AccountRecord();
             record.setCharge(i);
             record.setChargeDate("01-01-2023");
-            customer2.addCharge(record);
+            customer2.getCharges().add(record);
         }
         // Setting up Customer 3
         customer3 = new Customer();
@@ -42,7 +42,7 @@ class CustomerTest {
             AccountRecord record = new AccountRecord();
             record.setCharge(i);
             record.setChargeDate("01-01-2023");
-            customer3.addCharge(record);
+            customer3.getCharges().add(record);
         }
     }
 

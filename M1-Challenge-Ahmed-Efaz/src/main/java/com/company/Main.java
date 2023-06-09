@@ -51,11 +51,11 @@ public class Main {
             record.setCharge(Integer.parseInt(customer[2]));
             record.setChargeDate(customer[3]);
             if (customer[0] == "1") {
-                wayneEnterprises.addCharge(record);
+                wayneEnterprises.getCharges().add(record);
             } else if (customer[0] == "2") {
-                dailyPlanet.addCharge(record);
+                dailyPlanet.getCharges().add(record);
             } else if (customer[0] == "3") {
-                aceChemical.addCharge(record);
+                aceChemical.getCharges().add(record);
             }
         }
 
