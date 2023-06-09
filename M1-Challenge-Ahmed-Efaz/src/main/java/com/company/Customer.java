@@ -45,6 +45,9 @@ public class Customer {
     @Override
     public String toString() {
         //update this
-        return "Customer ID: " + Integer.toString(id) + " | Customer Name: " + name + " | Customer Balance: $" + Integer.toString(getBalance());
+        if (getBalance() >= 0) {
+            return "Customer ID: " + Integer.toString(id) + " | Customer Name: " + name + " | Customer Balance: $" + Integer.toString(getBalance());
+        }
+        return "Customer ID: " + Integer.toString(id) + " | Customer Name: " + name + " | Customer Balance: -$" + (Integer.toString(-1 * getBalance()));
     }
 }
