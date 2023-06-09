@@ -40,6 +40,12 @@ public class Main {
         aceChemical.setId(Integer.parseInt(("3")));
         aceChemical.setName("Ace Chemical");
 
+        List<Customer> customers = Arrays.asList(
+          wayneEnterprises,
+          dailyPlanet,
+          aceChemical
+        );
+
         for (String[] customer: customerData) {
             AccountRecord record = new AccountRecord();
             record.setCharge(Integer.parseInt(customer[2]));
@@ -54,24 +60,17 @@ public class Main {
         }
 
         System.out.println("Positive accounts:");
-        if (wayneEnterprises.getBalance() > 0) {
-            System.out.println(wayneEnterprises);
+        for (Customer customer: customers) {
+            if (customer.getBalance() > 0) {
+                System.out.println(customer);
+            }
         }
-        if (dailyPlanet.getBalance() > 0) {
-            System.out.println(dailyPlanet);
-        }
-        if (aceChemical.getBalance() > 0) {
-            System.out.println(aceChemical);
-        }
+
         System.out.println("Negative accounts:");
-        if (wayneEnterprises.getBalance() < 0) {
-            System.out.println(wayneEnterprises);
-        }
-        if (dailyPlanet.getBalance() < 0) {
-            System.out.println(dailyPlanet);
-        }
-        if (aceChemical.getBalance() < 0) {
-            System.out.println(aceChemical);
+        for (Customer customer: customers) {
+            if (customer.getBalance() < 0) {
+                System.out.println(customer);
+            }
         }
     }
 }
