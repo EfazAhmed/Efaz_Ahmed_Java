@@ -13,7 +13,7 @@ class CustomerTest {
 
 
     @BeforeEach
-    void setUp() {
+    public void setUp() {
         // Setting up Customer 1
         customer1 = new Customer();
         customer1.setId(1);
@@ -47,14 +47,14 @@ class CustomerTest {
     }
 
     @Test
-    void getBalance() {
+    public void getBalance() {
         assertEquals(450, customer1.getBalance());
         assertEquals(-4900, customer2.getBalance());
         assertEquals(0, customer3.getBalance());
     }
 
     @Test
-    void testToString() {
+    public void testToString() {
         String expected;
 
         expected = "Customer ID: 1 | Customer Name: c1 | Customer Balance: $450";
