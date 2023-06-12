@@ -36,7 +36,11 @@ public class Customer {
     public List<AccountRecord> getCharges() {
         return charges;
     }
-    
+
+    public void addCharge(AccountRecord record) {
+        charges.add(record);
+    }
+
     @Override
     public String toString() {
         //update this
