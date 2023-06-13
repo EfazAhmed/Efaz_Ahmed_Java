@@ -10,7 +10,6 @@ class CustomerTest {
     Customer customer1;
     Customer customer2;
     Customer customer3;
-
     Customer customer4;
 
 
