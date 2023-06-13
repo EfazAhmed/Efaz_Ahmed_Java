@@ -3,6 +3,7 @@ package com.company;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.HashMap;
 
 public class Main {
 
@@ -27,38 +28,32 @@ public class Main {
     );
 
     public static void main(String[] args) {
-        //Update this
-        Customer wayneEnterprises = new Customer();
-        wayneEnterprises.setId(Integer.parseInt("1"));
-        wayneEnterprises.setName("Wayne Enterprises");
 
-        Customer dailyPlanet =  new Customer();
-        dailyPlanet.setId(Integer.parseInt(("2")));
-        dailyPlanet.setName("Daily Planet");
+        // Created HashMap to find Unique Customers
+        HashMap<Integer, Customer> uniqueCustomers = new HashMap<>();
 
-        Customer aceChemical =  new Customer();
-        aceChemical.setId(Integer.parseInt(("3")));
-        aceChemical.setName("Ace Chemical");
-
-        List<Customer> customers = Arrays.asList(
-          wayneEnterprises,
-          dailyPlanet,
-          aceChemical
-        );
-
-        for (String[] customer: customerData) {
-            AccountRecord record = new AccountRecord();
-            record.setCharge(Integer.parseInt(customer[2]));
-            record.setChargeDate(customer[3]);
-            if (customer[0] == "1") {
-                wayneEnterprises.addCharge(record);
-            } else if (customer[0] == "2") {
-                dailyPlanet.addCharge(record);
-            } else if (customer[0] == "3") {
-                aceChemical.addCharge(record);
+        // Traversed through customerData and populate uniqueCustomers
+        for (String[] customerRecord: customerData) {
+            int id = Integer.parseInt(customerRecord[0]);
+            Customer customer;
+            if (uniqueCustomers.containsKey(id)) {
+                customer = uniqueCustomers.get(id);
+            } else {
+                customer = new Customer();
+                customer.setId(id);
+                customer.setName(customerRecord[1]);
+                uniqueCustomers.put(id, customer);
             }
+            AccountRecord record = new AccountRecord();
+            record.setCharge(Integer.parseInt(customerRecord[2]));
+            record.setChargeDate(customerRecord[3]);
+            customer.addCharge(record);
         }
 
+        // Populated a List of Customers using the values of uniqueCustomers
+        List<Customer> customers = new ArrayList<>(uniqueCustomers.values());
+
+        // Printed out all accounts with a positive balance
         System.out.println("Positive accounts:");
         for (Customer customer: customers) {
             if (customer.getBalance() > 0) {
@@ -66,6 +61,7 @@ public class Main {
             }
         }
 
+        // Printed out all accounts with a negative balance
         System.out.println("Negative accounts:");
         for (Customer customer: customers) {
             if (customer.getBalance() < 0) {
