@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.HashMap;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -29,33 +30,31 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // Created HashMap to find Unique Customers
-        HashMap<Integer, Customer> uniqueCustomers = new HashMap<>();
+        // Created an Empty List of Unique Customers
+        List<Customer> uniqueCustomers = new ArrayList<>();
 
-        // Traversed through customerData and populate uniqueCustomers
-        for (String[] customerRecord: customerData) {
-            int id = Integer.parseInt(customerRecord[0]);
+        // Algorithm to populate uniqueCustomers and the charges associated with each unique customer
+        for (int i = 0; i < customerData.size(); i++) {
+            int id = Integer.parseInt(customerData.get(i)[0]);
+            boolean isExist = uniqueCustomers.stream().anyMatch(obj -> obj.getId() == id);
             Customer customer;
-            if (uniqueCustomers.containsKey(id)) {
-                customer = uniqueCustomers.get(id);
+            if (isExist) {
+                customer = uniqueCustomers.stream().filter(obj -> obj.getId() == id).collect(Collectors.toList()).get(0);
             } else {
                 customer = new Customer();
-                customer.setId(id);
-                customer.setName(customerRecord[1]);
-                uniqueCustomers.put(id, customer);
+                customer.setId(Integer.parseInt(customerData.get(i)[0]));
+                customer.setName(customerData.get(i)[1]);
+                uniqueCustomers.add(customer);
             }
             AccountRecord record = new AccountRecord();
-            record.setCharge(Integer.parseInt(customerRecord[2]));
-            record.setChargeDate(customerRecord[3]);
+            record.setCharge(Integer.parseInt(customerData.get(i)[2]));
+            record.setChargeDate(customerData.get(i)[3]);
             customer.addCharge(record);
         }
 
-        // Populated a List of Customers using the values of uniqueCustomers
-        List<Customer> customers = new ArrayList<>(uniqueCustomers.values());
-
         // Printed out all accounts with a positive balance
         System.out.println("Positive accounts:");
-        for (Customer customer: customers) {
+        for (Customer customer: uniqueCustomers) {
             if (customer.getBalance() > 0) {
                 System.out.println(customer);
             }
@@ -63,10 +62,11 @@ public class Main {
 
         // Printed out all accounts with a negative balance
         System.out.println("Negative accounts:");
-        for (Customer customer: customers) {
+        for (Customer customer: uniqueCustomers) {
             if (customer.getBalance() < 0) {
                 System.out.println(customer);
             }
         }
+
     }
 }
