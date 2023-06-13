@@ -11,6 +11,8 @@ class CustomerTest {
     Customer customer2;
     Customer customer3;
 
+    Customer customer4;
+
 
     @BeforeEach
     public void setUp() {
@@ -44,13 +46,26 @@ class CustomerTest {
             record.setChargeDate("01-01-2023");
             customer3.addCharge(record);
         }
+        // Setting up Customer 4
+        customer4 = new Customer();
+        customer4.setId(4);
+        customer4.setName("c4");
     }
 
     @Test
-    public void getBalance() {
+    public void shouldBePositiveBalance() {
         assertEquals(450, customer1.getBalance());
+    }
+
+    @Test
+    public void shouldBeNegativeBalance() {
         assertEquals(-4900, customer2.getBalance());
+    }
+
+    @Test
+    public void shouldBeZeroBalance() {
         assertEquals(0, customer3.getBalance());
+        assertEquals(0, customer4.getBalance());
     }
 
     @Test
@@ -65,5 +80,8 @@ class CustomerTest {
 
         expected = "Customer ID: 3 | Customer Name: c3 | Customer Balance: $0";
         assertEquals(expected, customer3.toString());
+
+        expected = "Customer ID: 4 | Customer Name: c4 | Customer Balance: $0";
+        assertEquals(expected, customer4.toString());
     }
 }
