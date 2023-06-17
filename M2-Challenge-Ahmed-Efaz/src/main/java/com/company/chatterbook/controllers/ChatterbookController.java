@@ -40,8 +40,8 @@ public class ChatterbookController {
 
 
     @RequestMapping(value="/users", method= RequestMethod.GET)
-    public List<User> getAllUsers() {
-        return this.userList;
+        public List<User> getAllUsers() {
+            return this.userList;
     }
 
 
