@@ -5,7 +5,7 @@ import java.util.List;
 
 public class User {
     private String name;
-    List<ChatterPost> chatterPosts = new ArrayList<>();
+    private List<ChatterPost> chatterPosts = new ArrayList<>();
 
     public User(String name) {
         this.name = name;

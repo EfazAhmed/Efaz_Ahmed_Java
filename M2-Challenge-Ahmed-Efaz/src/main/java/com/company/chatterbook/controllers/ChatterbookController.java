@@ -2,6 +2,7 @@ package com.company.chatterbook.controllers;
 
 import com.company.chatterbook.models.ChatterPost;
 import com.company.chatterbook.models.User;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Arrays;
@@ -40,12 +41,14 @@ public class ChatterbookController {
 
 
     @RequestMapping(value="/users", method= RequestMethod.GET)
-        public List<User> getAllUsers() {
+    @ResponseStatus(value = HttpStatus.OK)
+    public List<User> getAllUsers() {
             return this.userList;
     }
 
 
     @RequestMapping(value="/users/{username}", method=RequestMethod.GET)
+    @ResponseStatus(value = HttpStatus.OK)
     public User getUserByUsername(@PathVariable String username) {
         for (User user: this.userList) {
             if (user.getName().equals(username)) {
@@ -56,6 +59,7 @@ public class ChatterbookController {
     }
 
     @RequestMapping(value="/posts/{username}", method=RequestMethod.GET)
+    @ResponseStatus(value = HttpStatus.OK)
     public List<ChatterPost> getChatterPostsByUsername(@PathVariable String username) {
         for (User user: this.userList) {
             if (user.getName().equals(username)) {
