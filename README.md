@@ -84,5 +84,28 @@ The goal of this Challenge is to reinforce your knowledge of Git, GitHub, and Ja
     - Created by [Efaz Ahmed](https://www.linkedin.com/in/eahmed2024/) and [Reuben Agogoe](https://www.linkedin.com/in/reubenagogoe/)
     - For more information regarding the video submission, please take a look at description of the YouTube Video.
 
+# Module 5 Challenge
 
+### Overview
+In this Challenge, you will create SQL queries to answer various questions. All of your queries will be run against the Northwind database.
+
+### Goals
+
+The goal of this Challenge is to reinforce your knowledge of SQL. You'll do the following:
+- Use SELECT statements in SQL queries.
+- Create specific queries using the WHERE clause and LIKE operator.
+- Sort query results using the ORDER BY keyword.
+
+### Requirements
+- Your queries must be in a file named northwind-queries-firstname-lastname.sql, in a folder named M5-Challenge-Lastname-Firstname.
+- SQL queries are clean (follow general patterns as presented in class), with the question you are answering in a SQL comment above each of your SQL queries.
+- Query returns all of the product categories
+- Query Returns all of the products made by Dell
+- Query returns all orders shipped to Pennsylvania
+- The query returns the first name and last name of all employees with last names that start with the letter W.
+- The query returns all customers from zip codes that start with 55.
+- The query returns all customers from zip codes that end with 0.
+- The query returns the first name, last name, and email for all customers with a ".org" email address.
+- The query returns the first name, last name, and phone number of all customers from the 202 area code.
+- The query returns the first name, last name, and phone number for all customers from the 202 area code, ordered by last name, and first name.
 
