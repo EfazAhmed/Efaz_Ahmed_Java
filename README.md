@@ -115,3 +115,40 @@ The goal of this Challenge is to reinforce your knowledge of SQL. You'll do the 
 - The query returns the first name, last name, and phone number of all customers from the 202 area code.
 - The query returns the first name, last name, and phone number for all customers from the 202 area code, ordered by last name, and first name.
 
+# Module 6 Challenge
+
+### Goals
+- The goal of this challenge is to reinforce your knowledge of Spring Data JPA. Specifically, you'll do the following:
+    - Automatically create a database using Spring Data JPA.
+    - Manipulate relational data using Spring Data JPA.
+    - Configure a Spring Boot project to connect with a MySQL database.
+    - Set up and execute unit/integration tests for Spring Data JPA.
+
+### User Stories
+- As a user, I would like to be able to filter customers by state.
+- As a user, I would like to be able to find a specific customer by id.
+- As a user, I would like to be able to delete customers.
+- As a user, I would like to be able to edit customers.
+- As a user, I would like to be able to add new customers.
+
+### Requirements
+- Your application must track the following data for each customer:
+    - Customer Id
+    - First name
+    - Last name
+    - Email
+    - Company
+    - Phone
+    - Address 1
+    - Address 2
+    - City
+    - State
+    - Postal code
+    - Country
+- The REST API must have the following features:
+    - Create a new customer record.
+    - Update an existing customer record.
+    - Delete an existing customer record.
+    - Find a customer record by id.
+    - Find customer records by state.
+
