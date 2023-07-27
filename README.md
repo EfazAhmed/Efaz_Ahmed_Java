@@ -3,6 +3,7 @@
 2. [Module 2 Challenge](#Module-2-Challenge)
 3. [Summative Project 1: Spring Boot and REST](#Summative-Project-1:-Spring-Boot-and-REST)
 4. [Module 5 Challenge](#Module-5-Challenge)
+5. [Module 6 Challenge](#Module-6-Challenge)
 
 # Module 1 Challenge
 
