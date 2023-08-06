@@ -2,8 +2,11 @@
 1. [Module 1 Challenge](#Module-1-Challenge)
 2. [Module 2 Challenge](#Module-2-Challenge)
 3. [Summative Project 1: Spring Boot and REST](#Summative-Project-1:-Spring-Boot-and-REST)
-4. [Module 5 Challenge](#Module-5-Challenge)
-5. [Module 6 Challenge](#Module-6-Challenge)
+    - [Video Walkthough](https://www.youtube.com/watch?v=XEws_rIi1y0)
+5. [Module 5 Challenge](#Module-5-Challenge)
+6. [Module 6 Challenge](#Module-6-Challenge)
+7. [Summative Project 2: Bookstore Inventory](#Summative-Project-2:-Bookstore-Inventory)
+    - [Video Walkthough](https://www.youtube.com/watch?v=uWoGKZG06Jg)
 
 # Module 1 Challenge
 
@@ -153,3 +156,78 @@ The goal of this Challenge is to reinforce your knowledge of SQL. You'll do the 
     - Find a customer record by id.
     - Find customer records by state.
 
+# Summative Project 2: Bookstore Inventory
+
+### User Stories
+- As an API user, I would like to create, read, update, and delete authors.
+- As an API user, I would like to create, read, update, and delete publishers.
+- As an API user, I would like to create, read, update, and delete books.
+- As an API user, I would like to find all books by a given author.
+
+### Requirements
+- Solution must be in an IntelliJ project called Summative-2-Lastname-Firstname.
+- Project must be built using Spring Web, Spring Data JPA, and Spring for GraphQL. Initialize the project using start.spring.io using project options as demonstrated previously in class.
+- Project must use Spring Data JPA that follows the pattern shown in class.
+- The REST API must accept and return data in JSON format where appropriate.
+- The REST API must be documented with Swagger. Save the .yaml file in the root of your project directory.
+- Provide a 1-3 minute Video Summary of the project.
+- Book API
+    - Code is clean (follows general patterns as presented in class).
+    - Implementation of Book model
+    - Implementation of Book repository and controller for:
+        - Create
+        - Read by Id
+        - Read All
+        - Update
+        - Delete
+        - Search Book by Author Id
+    - Test of Book repository and MockMvc test cases for:
+        - Create
+        - Read by Id
+        - Read All
+        - Update
+        - Delete
+        - Search Book by Author Id
+- Author API
+    - Code is clean (follows general patterns as presented in class)
+    - Implementation of Author model
+    - Implementation of Author repository and controller for:
+        - Create
+        - Read by Id
+        - Read All
+        - Update
+        - Delete
+    - Test of Author repository and MockMvc test cases for:
+        - Create
+        - Read by Id
+        - Read All
+        - Update
+        - Delete
+- Publisher API
+    - Code is clean (follows general patterns as presented in class)
+    - Implementation of Publisher model
+    - Implementation of Publisher repository and controller for:
+        - Create
+        - Read by Id
+        - Read All
+        - Update
+        - Delete
+    - Test of Publisher repository and MockMvc test cases for:
+        - Create
+        - Read by Id
+        - Read All
+        - Update
+        - Delete
+- GraphQL
+    - Implementation of:
+        - Find Publisher by Id
+        - Including books for the publisher and authors for the books.
+        - Find Author by Id
+        - Including books by the author.
+        - Find Book by Id
+        - Including the author and publisher of the book
+
+### Video Submission
+- [YouTube Link for Summative Project 2 Walkthough](https://www.youtube.com/watch?v=uWoGKZG06Jg)
+    - Created by [Efaz Ahmed](https://www.linkedin.com/in/eahmed2024/) and [Reuben Agogoe](https://www.linkedin.com/in/reubenagogoe/)
+    - For more information regarding the video submission, please take a look at description of the YouTube Video.
