@@ -1,11 +1,11 @@
 # Table of Contents
 1. [Module 1 Challenge](#Module-1-Challenge)
 2. [Module 2 Challenge](#Module-2-Challenge)
-3. [Summative Project 1: Spring Boot and REST](#Summative-Project-1:-Spring-Boot-and-REST)
+3. [Summative Project 1 Spring Boot and REST](#Summative-Project-1:-Spring-Boot-and-REST)
     - [Video Walkthough](https://www.youtube.com/watch?v=XEws_rIi1y0)
 5. [Module 5 Challenge](#Module-5-Challenge)
 6. [Module 6 Challenge](#Module-6-Challenge)
-7. [Summative Project 2: Bookstore Inventory](#Summative-Project-2:-Bookstore-Inventory)
+7. [Summative Project 2 Bookstore Inventory](#Summative-Project-2:-Bookstore-Inventory)
     - [Video Walkthough](https://www.youtube.com/watch?v=uWoGKZG06Jg)
 
 # Module 1 Challenge
@@ -54,7 +54,7 @@ The goal of this Challenge is to reinforce your knowledge of Git, GitHub, and Ja
 - API is documented using OpenAPI.
 
 
-# Summative Project 1: Spring Boot and REST
+# Summative Project 1 Spring Boot and REST
 
 ### User Stories
 - As an API user, I want to request a random quote so that I can expand my knowledge.
@@ -156,7 +156,7 @@ The goal of this Challenge is to reinforce your knowledge of SQL. You'll do the 
     - Find a customer record by id.
     - Find customer records by state.
 
-# Summative Project 2: Bookstore Inventory
+# Summative Project 2 Bookstore Inventory
 
 ### User Stories
 - As an API user, I would like to create, read, update, and delete authors.
