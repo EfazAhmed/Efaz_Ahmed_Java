@@ -1,11 +1,11 @@
 # Table of Contents
 1. [Module 1 Challenge](#Module-1-Challenge)
 2. [Module 2 Challenge](#Module-2-Challenge)
-3. [Summative Project 1 Spring Boot and REST](#Summative-Project-1:-Spring-Boot-and-REST)
+3. [Summative Project 1 Spring Boot and REST](#Summative-Project-1-Spring-Boot-and-REST)
     - [Video Walkthough](https://www.youtube.com/watch?v=XEws_rIi1y0)
 5. [Module 5 Challenge](#Module-5-Challenge)
 6. [Module 6 Challenge](#Module-6-Challenge)
-7. [Summative Project 2 Bookstore Inventory](#Summative-Project-2:-Bookstore-Inventory)
+7. [Summative Project 2 Bookstore Inventory](#Summative-Project-2-Bookstore-Inventory)
     - [Video Walkthough](https://www.youtube.com/watch?v=uWoGKZG06Jg)
 
 # Module 1 Challenge
