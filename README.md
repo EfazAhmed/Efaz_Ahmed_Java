@@ -7,6 +7,7 @@
 6. [Module 6 Challenge](#Module-6-Challenge)
 7. [Summative Project 2 Bookstore Inventory](#Summative-Project-2-Bookstore-Inventory)
     - [Video Walkthough](https://www.youtube.com/watch?v=uWoGKZG06Jg)
+8. [Module 9 Challenge](#Module-9-Challenge)
 
 # Module 1 Challenge
 
@@ -231,3 +232,28 @@ The goal of this Challenge is to reinforce your knowledge of SQL. You'll do the 
 - [YouTube Link for Summative Project 2 Walkthough](https://www.youtube.com/watch?v=uWoGKZG06Jg)
     - Created by [Efaz Ahmed](https://www.linkedin.com/in/eahmed2024/) and [Reuben Agogoe](https://www.linkedin.com/in/reubenagogoe/)
     - For more information regarding the video submission, please take a look at description of the YouTube Video.
+	
+# Module 9 Challenge
+
+### Goals
+The goal of this challenge is to reinforce your knowledge of OAuth.
+- Create an Authorization Server which will facilitate authentication via OAuth.
+- Refactor the provided Record Store API application to enforce authentication accordingly.
+
+### Instructions
+- Create a new local folder named M9-Challenge-Lastname-Firstname. Add all code for this challenge to this folder.
+- Using the techniques described in class, create an Authorization Server which will facilitate OAuth authentication for the provided Record Store API application.
+- For the Authorization server, create a few user accounts for testing purposes.
+- Using the techniques described in class, refactor the provided Record Store API starter project such that the controller enforces authentication via OAuth for all Record Store API routes.
+- Using Insomnia, verify the following:
+- An unauthenticated client is unable to access any of the API routes.
+- An authenticated OAuth client is able to access all routes, including GET, PUT and DELETE operations.
+
+### Requirements
+- Authorization Server
+    - Returns bearer tokens only when provided with valid username/password pairs.
+    - Stores user data in MySQL via the Spring Security Schema.
+    - Validates tokens provided by the Record Store API and sends back the user data associated with the given token.
+- Record Store API
+    - Prevents unauthenticated clients access to all API routes.
+    - Provides access to GET, PUT and DELETE routes to authenticated clients.
