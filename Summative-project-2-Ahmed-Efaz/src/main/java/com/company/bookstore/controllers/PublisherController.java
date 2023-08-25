@@ -37,15 +37,10 @@ public class PublisherController {
 
     @PutMapping("/publishers/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void updatePublisherById(@PathVariable int id) {
+    public void updatePublisherById(@PathVariable int id, @RequestBody Publisher updatedPublisher) {
         Optional<Publisher> resultPublisher = publisherRepository.findById(id);
         if (resultPublisher.isPresent()) {
             Publisher returnVal = resultPublisher.get();
-            Publisher updatedPublisher = new Publisher(
-                    returnVal.getName(), returnVal.getStreet(),
-                    returnVal.getCity(), returnVal.getState(), returnVal.getPostalCode(),
-                    returnVal.getPhone(), returnVal.getEmail()
-            );
             updatedPublisher.setId(returnVal.getId());
             publisherRepository.save(updatedPublisher);
         }
@@ -57,6 +52,5 @@ public class PublisherController {
         Optional<Publisher> resultPublisher = publisherRepository.findById(id);
         if (resultPublisher.isPresent()) { publisherRepository.deleteById(id); }
     }
-
 
 }

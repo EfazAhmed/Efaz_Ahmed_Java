@@ -37,14 +37,10 @@ public class BookController {
 
     @PutMapping("/books/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void updateBookById(@PathVariable int id) {
+    public void updateBookById(@PathVariable int id, @RequestBody Book updatedBook) {
         Optional<Book> resultBook = bookRepository.findById(id);
         if (resultBook.isPresent()) {
             Book returnVal = resultBook.get();
-            Book updatedBook = new Book(
-                   returnVal.getIsbn(), returnVal.getPublishDate(), returnVal.getAuthorId(),
-                    returnVal.getTitle(), returnVal.getPublisherId(), returnVal.getPrice()
-            );
             updatedBook.setId(returnVal.getId());
             bookRepository.save(updatedBook);
         }

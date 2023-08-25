@@ -37,15 +37,10 @@ public class AuthorController {
 
     @PutMapping("/authors/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void updateAuthorById(@PathVariable int id) {
+    public void updateAuthorById(@PathVariable int id, @RequestBody Author updatedAuthor) {
         Optional<Author> resultAuthor = authorRepository.findById(id);
         if (resultAuthor.isPresent()) {
             Author returnVal = resultAuthor.get();
-            Author updatedAuthor = new Author(
-                   returnVal.getFirstName(), returnVal.getLastName(),
-                    returnVal.getStreet(), returnVal.getCity(), returnVal.getState(),
-                    returnVal.getPostalCode(), returnVal.getPhone(), returnVal.getEmail()
-            );
             updatedAuthor.setId(returnVal.getId());
             authorRepository.save(updatedAuthor);
         }
