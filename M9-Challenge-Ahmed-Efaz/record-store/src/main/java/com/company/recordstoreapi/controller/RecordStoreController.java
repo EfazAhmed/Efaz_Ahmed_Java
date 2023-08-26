@@ -43,8 +43,6 @@ public class RecordStoreController {
         return recordList;
     }
 
-
-
     @RequestMapping(value = "/records/{id}", method = RequestMethod.GET)
     @ResponseStatus(value = HttpStatus.OK)
     public Record getRecordById(@PathVariable int id) {
